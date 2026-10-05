@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Rohit Earth Tech Co.</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#101114}
+:root{--y:#ffd21f;--dark:#0b0d10;--muted:#687078}
+.top{background:#0b0d10;color:#fff;padding:14px 16px 16px;position:sticky;top:0;z-index:5}
+.head{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:14px;background:var(--y);display:grid;place-items:center;color:#0b0d10;font-size:27px;font-weight:900}
+.brand{line-height:.9;flex:1}.brand b{font-size:25px;letter-spacing:.5px}.brand strong{color:var(--y);font-size:15px;letter-spacing:1px}.brand small{display:block;color:#d8d8d8;margin-top:6px;font-size:11px}
+.lang{display:flex;border:1px solid #fff;border-radius:20px;overflow:hidden;font-weight:800;font-size:12px}.lang span{padding:8px 10px}.lang .on{background:var(--y);color:#111}
+.hero{margin:0;background:linear-gradient(135deg,#172027 0%,#667c83 52%,#d5ad62 100%);min-height:270px;padding:28px 18px 18px;color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-40px;bottom:-40px;width:280px;height:180px;background:linear-gradient(145deg,#ffdc35,#c48b00);clip-path:polygon(0 65%,22% 35%,36% 48%,52% 20%,70% 43%,100% 0,100% 100%,0 100%);opacity:.95}
+.hero h1{font-size:28px;line-height:1.05;margin:0 0 10px;max-width:330px}.hero p{margin:0;color:#e8e8e8;font-size:13px;max-width:280px}.strip{display:inline-block;background:var(--y);color:#111;padding:9px 12px;margin-top:18px;font-weight:900;border-radius:5px;font-size:12px}.machine{position:absolute;bottom:0;left:16px;font-size:72px;filter:drop-shadow(0 8px 4px #0006)}
+.wrap{padding:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card{border-radius:18px;padding:17px;min-height:155px;position:relative;overflow:hidden;box-shadow:0 5px 18px #00000013}.black{background:#11151a;color:#fff}.yellow{background:var(--y);color:#111}.icon{width:42px;height:42px;border-radius:50%;background:#111;color:var(--y);display:grid;place-items:center;font-size:21px;margin-bottom:12px}.black .icon{background:var(--y);color:#111}.card h2{font-size:18px;margin:0 0 7px}.card p{font-size:11px;line-height:1.35;margin:0;color:#d9d9d9}.yellow p{color:#333}.arrow{position:absolute;left:16px;bottom:14px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--y);color:#111;font-weight:900}.yellow .arrow{background:#111;color:#fff}
+.quick{margin-top:14px;background:#fff;border-radius:18px;padding:4px;box-shadow:0 4px 15px #0000000d}.q{display:flex;align-items:center;padding:14px 12px;border-bottom:1px solid #eee}.q:last-child{border:0}.qicon{width:42px;height:42px;border-radius:50%;background:#16a34a;color:#fff;display:grid;place-items:center;font-size:21px;margin-right:12px}.q b{font-size:14px}.q small{display:block;color:var(--muted);margin-top:3px}.q .chev{margin-left:auto;font-size:22px}
+.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:#fff;margin-top:14px;padding:15px 4px;border-radius:16px}.badge{text-align:center;font-size:9px;color:#333}.badge div{font-size:20px;margin-bottom:5px}
+.location{margin-top:14px;background:#11151a;color:#fff;border-radius:18px;padding:18px}.location h3{color:var(--y);margin:0 0 7px}.location p{margin:0;color:#ddd;font-size:12px;line-height:1.5}
+.nav{position:sticky;bottom:0;background:#0b0d10;color:#fff;display:grid;grid-template-columns:repeat(5,1fr);padding:9px 3px 8px;z-index:6}.nav button{background:none;border:0;color:#fff;font-size:9px}.nav button div{font-size:20px;margin-bottom:3px}.nav .active{color:var(--y)}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:10;align-items:flex-end}.sheet{background:#fff;border-radius:24px 24px 0 0;padding:20px;width:100%;max-height:80vh;overflow:auto}.sheet h2{margin-top:0}.input{width:100%;padding:13px;border:1px solid #ddd;border-radius:10px;margin:7px 0}.btn{border:0;background:var(--y);padding:13px 18px;border-radius:10px;font-weight:900;width:100%;margin-top:10px}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="head">
+  <div class="logo">R</div>
+  <div class="brand"><b>ROHIT</b><strong> EARTH TECH CO.</strong><small>Earthmoving Machine Services</small></div>
+  <div class="lang"><span class="on" onclick="lang('en')">EN</span><span onclick="lang('hi')">हिंदी</span></div>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="machine">🚜</div>
+ <h1 id="heroTitle">Your Trusted Partner in<br><b>Heavy Equipment Solutions</b></h1>
+ <p id="heroSub">Professional machine repair, rental, genuine spare parts and fast enquiry support.</p>
+ <span class="strip">REPAIR &nbsp; | &nbsp; RENTAL &nbsp; | &nbsp; SPARE PARTS &nbsp; | &nbsp; ENQUIRY</span>
+</section>
+
+<main class="wrap">
+ <div class="grid">
+  <div class="card black" onclick="openSheet('Machine Repair','Select your machine and tell us the problem.')"><div class="icon">🔧</div><h2>Machine Repair</h2><p>Expert service for all earthmoving machines</p><div class="arrow">→</div></div>
+  <div class="card yellow" onclick="openSheet('Machine Rental','Choose a machine and enquire for day/month rental.')"><div class="icon">🚜</div><h2>Machine Rental</h2><p>Grader, Poclain, Roller, Piling Machine & more</p><div class="arrow">→</div></div>
+  <div class="card yellow" onclick="openSheet('Spare Parts Order','Send your machine and part details.')"><div class="icon">⚙️</div><h2>Spare Parts</h2><p>Genuine parts for better performance</p><div class="arrow">→</div></div>
+  <div class="card black" onclick="openSheet('Send Enquiry','Tell us what you need and we will contact you.')"><div class="icon">✉️</div><h2>Send Enquiry</h2><p>Tell us your requirement. We’ll get back to you.</p><div class="arrow">→</div></div>
+ </div>
+
+ <div class="quick">
+  <div class="q" onclick="call('9062563733')"><div class="qicon">☎</div><div><b>Call Us</b><small>9062563733 / 9899300427</small></div><span class="chev">›</span></div>
+  <div class="q" onclick="wa()"><div class="qicon">◉</div><div><b>WhatsApp Us</b><small>Chat with Rohit Earth Tech Co.</small></div><span class="chev">›</span></div>
+ </div>
+
+ <div class="badges">
+  <div class="badge"><div>🛡️</div>Reliable<br>Service</div><div class="badge"><div>⚙️</div>Quality<br>Parts</div><div class="badge"><div>👥</div>Experienced<br>Team</div><div class="badge"><div>24</div>24/7<br>Support</div>
+ </div>
+
+ <div class="location"><h3>📍 Our Location</h3><p><b>Rohit Earth Tech Co.</b><br>Kantalia, Kadambagachi, North 24 Parganas, West Bengal<br><br>Serving customers across India.</p></div>
+</main>
+
+<nav class="nav">
+ <button class="active"><div>⌂</div>Home</button><button onclick="openSheet('Machine Repair','Repair request')"><div>🔧</div>Repair</button><button onclick="openSheet('Machine Rental','Rental enquiry')"><div>🚜</div>Rental</button><button onclick="openSheet('Spare Parts','Parts order')"><div>⚙</div>Parts</button><button onclick="openSheet('Contact Us','Call or WhatsApp us')"><div>✉</div>Contact</button>
+</nav>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeSheet()"><div class="sheet"><h2 id="sheetTitle"></h2><p id="sheetText"></p><input class="input" id="name" placeholder="Your Name"><input class="input" id="phone" placeholder="Mobile Number"><textarea class="input" id="msg" rows="4" placeholder="Describe your requirement"></textarea><button class="btn" onclick="waMsg()">Send on WhatsApp</button><button class="btn" style="background:#111;color:#fff" onclick="closeSheet()">Close</button></div></div>
+
+<script>
+function openSheet(t,s){document.getElementById('sheetTitle').innerText=t;document.getElementById('sheetText').innerText=s;document.getElementById('modal').style.display='flex'}
+function closeSheet(){document.getElementById('modal').style.display='none'}
+function call(n){location.href='tel:'+n}
+function wa(){location.href='https://wa.me/919062563733'}
+function waMsg(){let n=document.getElementById('name').value,p=document.getElementById('phone').value,m=document.getElementById('msg').value;let x=encodeURIComponent('New Enquiry\\nName: '+n+'\\nPhone: '+p+'\\nRequirement: '+m);location.href='https://wa.me/919062563733?text='+x}
+function lang(x){if(x==='hi'){document.getElementById('heroTitle').innerHTML='भारी मशीनों के लिए<br><b>आपका भरोसेमंद साथी</b>';document.getElementById('heroSub').innerText='मशीन रिपेयर, रेंटल, Genuine Spare Parts और enquiry support.'}else{document.getElementById('heroTitle').innerHTML='Your Trusted Partner in<br><b>Heavy Equipment Solutions</b>';document.getElementById('heroSub').innerText='Professional machine repair, rental, genuine spare parts and fast enquiry support.'}}
+</script>
+</body></html>
